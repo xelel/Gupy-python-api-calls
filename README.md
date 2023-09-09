@@ -245,7 +245,7 @@ Para instalar `pytest` e `pytest-mock`, use os seguintes comandos:
 ```bash
 pip install pytest
 pip install pytest-mock
-
+```
 
 ## 🤝 Contribuições
 
