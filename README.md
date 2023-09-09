@@ -93,7 +93,7 @@ O arquivo `main.py` é o script principal que combina funcionalidades dos módul
    - Utiliza o método `dataframe_to_table` para carregar cada DataFrame (`df_jobs`, `df_app`, `df_steps`) no banco de dados, criando (ou substituindo, se já existirem) as tabelas "Jobs", "Applications" e "Steps", respectivamente.
 
 **Notas Importantes**:
-- O token de autorização para a API da Gupy está hard-coded no arquivo `gupy.py`. Para manter a segurança, é aconselhável substituir isso por uma variável de ambiente ou algum outro método seguro de armazenamento e acesso a informações sensíveis.
+
 - O script está configurado para substituir as tabelas existentes no banco de dados a cada execução. Se desejar preservar os dados existentes, pode ser necessário ajustar o parâmetro `if_exists` no método `dataframe_to_table`.
 
 ### 🐳 Docker
@@ -226,6 +226,26 @@ numpy==1.21.0
 ```
 
 Isso garantirá que a versão 1.21.0 da biblioteca numpy seja instalada.
+
+
+# Guia de Testes para o Módulo Gupy
+
+Este guia oferece instruções para executar os testes unitários para o módulo Gupy.
+
+## Pré-requisitos
+
+Certifique-se de ter as seguintes ferramentas e bibliotecas instaladas em seu ambiente de desenvolvimento:
+
+- Python 3.8 ou superior
+- pytest
+- pytest-mock
+
+Para instalar `pytest` e `pytest-mock`, use os seguintes comandos:
+
+```bash
+pip install pytest
+pip install pytest-mock
+
 
 ## 🤝 Contribuições
 
